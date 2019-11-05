@@ -17,10 +17,10 @@ class RNVideoProcessingManager: RCTViewManager {
 
     @objc override func constantsToExport() -> [AnyHashable: Any] {
         return [
-            "ScaleNone": AVLayerVideoGravityResizeAspect,
-            "ScaleToFill": AVLayerVideoGravityResize,
-            "ScaleAspectFit": AVLayerVideoGravityResizeAspect,
-            "ScaleAspectFill": AVLayerVideoGravityResizeAspectFill
+            "ScaleNone": AVLayerVideoGravity.resizeAspect,
+            "ScaleToFill": AVLayerVideoGravity.resize,
+            "ScaleAspectFit": AVLayerVideoGravity.resizeAspect,
+            "ScaleAspectFill": AVLayerVideoGravity.resizeAspectFill
         ]
     }
 

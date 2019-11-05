@@ -21,8 +21,8 @@ enum QUALITY_ENUM: String {
 @objc(RNVideoTrimmer)
 class RNVideoTrimmer: NSObject {
 
-  @objc func getVideoOrientationFromAsset(asset : AVAsset) -> UIImageOrientation {
-    let videoTrack: AVAssetTrack? = asset.tracks(withMediaType: AVMediaTypeVideo)[0]
+  @objc func getVideoOrientationFromAsset(asset : AVAsset) -> UIImage.Orientation {
+    let videoTrack: AVAssetTrack? = asset.tracks(withMediaType: AVMediaType.video)[0]
     let size = videoTrack!.naturalSize
 
     let txf: CGAffineTransform = videoTrack!.preferredTransform
@@ -81,11 +81,11 @@ class RNVideoTrimmer: NSObject {
     }
 
     exportSession.outputURL = NSURL.fileURL(withPath: outputURL)
-    exportSession.outputFileType = AVFileTypeMPEG4
+    exportSession.outputFileType = AVFileType.mp4
     exportSession.shouldOptimizeForNetworkUse = true
 
     let videoComposition = AVMutableVideoComposition(propertiesOf: asset)
-    let clipVideoTrack: AVAssetTrack! = asset.tracks(withMediaType: AVMediaTypeVideo)[0]
+    let clipVideoTrack: AVAssetTrack! = asset.tracks(withMediaType: AVMediaType.video)[0]
     let videoOrientation = self.getVideoOrientationFromAsset(asset: asset)
 
     let videoWidth : CGFloat
@@ -99,7 +99,7 @@ class RNVideoTrimmer: NSObject {
       videoHeight = clipVideoTrack.naturalSize.height
     }
 
-    videoComposition.frameDuration = CMTimeMake(1, 30)
+    videoComposition.frameDuration = CMTimeMake(value: 1, timescale: 30)
 
     while( cropWidth.truncatingRemainder(dividingBy: 2) > 0 && cropWidth < videoWidth ) {
       cropWidth += 1.0
@@ -118,7 +118,7 @@ class RNVideoTrimmer: NSObject {
     videoComposition.renderSize = CGSize(width: cropWidth, height: cropHeight)
 
     let instruction : AVMutableVideoCompositionInstruction = AVMutableVideoCompositionInstruction()
-    instruction.timeRange = CMTimeRange(start: kCMTimeZero, end: asset.duration)
+    instruction.timeRange = CMTimeRange(start: CMTime.zero, end: asset.duration)
 
     var t1 = CGAffineTransform.identity
     var t2 = CGAffineTransform.identity
@@ -149,7 +149,7 @@ class RNVideoTrimmer: NSObject {
     }
 
     let finalTransform: CGAffineTransform = t2
-    transformer.setTransform(finalTransform, at: kCMTimeZero)
+    transformer.setTransform(finalTransform, at: CMTime.zero)
 
     instruction.layerInstructions = [transformer]
     videoComposition.instructions = [instruction]
@@ -218,13 +218,13 @@ class RNVideoTrimmer: NSObject {
               return
       }
       exportSession.outputURL = NSURL.fileURL(withPath: outputURL.path)
-      exportSession.outputFileType = AVFileTypeMPEG4
+      exportSession.outputFileType = AVFileType.mp4
       exportSession.shouldOptimizeForNetworkUse = true
 
       if saveToCameraRoll && saveWithCurrentDate {
         let metaItem = AVMutableMetadataItem()
-        metaItem.key = AVMetadataCommonKeyCreationDate as (NSCopying & NSObjectProtocol)?
-        metaItem.keySpace = AVMetadataKeySpaceCommon
+        metaItem.key = AVMetadataKey.commonKeyCreationDate as (NSCopying & NSObjectProtocol)?
+        metaItem.keySpace = AVMetadataKeySpace.common
         metaItem.value = NSDate() as (NSCopying & NSObjectProtocol)?
         exportSession.metadata = [metaItem]
       }
@@ -273,7 +273,7 @@ class RNVideoTrimmer: NSObject {
       let sourceURL = getSourceURL(source: source)
       let asset = AVAsset(url: sourceURL as URL)
 
-      guard let videoTrack = asset.tracks(withMediaType: AVMediaTypeVideo).first else  {
+      guard let videoTrack = asset.tracks(withMediaType: AVMediaType.video).first else  {
           callback(["Error getting track info", NSNull()])
           return
       }
@@ -315,8 +315,8 @@ class RNVideoTrimmer: NSObject {
       compressionEncoder!.shouldOptimizeForNetworkUse = true
       if saveToCameraRoll && saveWithCurrentDate {
         let metaItem = AVMutableMetadataItem()
-        metaItem.key = AVMetadataCommonKeyCreationDate as (NSCopying & NSObjectProtocol)?
-        metaItem.keySpace = AVMetadataKeySpaceCommon
+        metaItem.key = AVMetadataKey.commonKeyCreationDate as (NSCopying & NSObjectProtocol)?
+        metaItem.keySpace = AVMetadataKeySpace.common
         metaItem.value = NSDate() as (NSCopying & NSObjectProtocol)?
         compressionEncoder!.metadata = [metaItem]
       }
@@ -361,7 +361,7 @@ class RNVideoTrimmer: NSObject {
     var assetInfo: [String: Any] = [
       "duration" : asset.duration.seconds
     ]
-    if let track = asset.tracks(withMediaType: AVMediaTypeVideo).first {
+    if let track = asset.tracks(withMediaType: AVMediaType.video).first {
       let naturalSize = track.naturalSize
       let t = track.preferredTransform
       let isPortrait = t.a == 0 && abs(t.b) == 1 && t.d == 0
@@ -399,7 +399,7 @@ class RNVideoTrimmer: NSObject {
       let imageRef = try imageGenerator.copyCGImage(at: timestamp, actualTime: nil)
       let image = UIImage(cgImage: imageRef)
       if ( format == "base64" ) {
-        let imgData = UIImagePNGRepresentation(image)
+        let imgData = image.pngData()
         let base64string = imgData?.base64EncodedString(options: Data.Base64EncodingOptions.init(rawValue: 0))
         if base64string != nil {
           callback( [NSNull(), base64string!] )
@@ -407,7 +407,7 @@ class RNVideoTrimmer: NSObject {
           callback( ["Unable to convert to base64)", NSNull()]  )
         }
       } else if ( format == "JPEG" ) {
-        let imgData = UIImageJPEGRepresentation(image, 1.0)
+        let imgData = image.jpegData(compressionQuality: 1.0)
 
         let fileName = ProcessInfo.processInfo.globallyUniqueString
         let fullPath = "\(NSTemporaryDirectory())\(fileName).jpg"
