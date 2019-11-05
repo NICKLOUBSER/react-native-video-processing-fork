@@ -28,13 +28,13 @@ class RNVideoTrimmer: NSObject {
     let txf: CGAffineTransform = videoTrack!.preferredTransform
 
     if (size.width == txf.tx && size.height == txf.ty) {
-      return UIImageOrientation.left;
+      return UIImage.Orientation.left;
     } else if (txf.tx == 0 && txf.ty == 0) {
-      return UIImageOrientation.right;
+      return UIImage.Orientation.right;
     } else if (txf.tx == 0 && txf.ty == size.width) {
-      return UIImageOrientation.down;
+      return UIImage.Orientation.down;
     } else {
-      return UIImageOrientation.up;
+      return UIImage.Orientation.up;
     }
   }
 
@@ -91,7 +91,7 @@ class RNVideoTrimmer: NSObject {
     let videoWidth : CGFloat
     let videoHeight : CGFloat
 
-    if ( videoOrientation == UIImageOrientation.up || videoOrientation == UIImageOrientation.down ) {
+    if ( videoOrientation == UIImage.Orientation.up || videoOrientation == UIImage.Orientation.down ) {
       videoWidth = clipVideoTrack.naturalSize.height
       videoHeight = clipVideoTrack.naturalSize.width
     } else {
@@ -310,7 +310,7 @@ class RNVideoTrimmer: NSObject {
           callback(["Error creating AVAssetExportSession", NSNull()])
           return
       }
-      compressionEncoder!.outputFileType = AVFileTypeMPEG4
+      compressionEncoder!.outputFileType = AVFileType.mp4.rawValue
       compressionEncoder!.outputURL = NSURL.fileURL(withPath: outputURL.path)
       compressionEncoder!.shouldOptimizeForNetworkUse = true
       if saveToCameraRoll && saveWithCurrentDate {

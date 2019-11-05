@@ -64,19 +64,19 @@ class RNVideoPlayer: RCTView {
     }
 
     var resizeMode: NSString? {
-        set {
-            if newValue == nil {
-                return
+            set {
+                if newValue == nil {
+                    return
+                }
+              self._resizeMode = AVLayerVideoGravity(rawValue: newValue as! String)
+                                                    self.playerLayer?.videoGravity = self._resizeMode
+                                                     self.setNeedsLayout()
+                print("CHANGED: resizeMode \(newValue)")
             }
-            self._resizeMode = AVLayerVideoGravity(rawValue: newValue as! String
-            self.playerLayer?.videoGravity = self._resizeMode
-            self.setNeedsLayout()
-            print("CHANGED: resizeMode \(newValue)")
+            get {
+                return nil
+            }
         }
-        get {
-            return nil
-        }
-    }
 
     var playerWidth: NSNumber? {
         set(val) {
@@ -118,7 +118,7 @@ class RNVideoPlayer: RCTView {
                 let floatVal = convertedValue >= 0 ? convertedValue : self._playerStartTime
                 print("CHANGED: currentTime \(floatVal)")
                 if floatVal <= self._playerEndTime && floatVal >= self._playerStartTime {
-                    self.player.seek(to: convertToCMTime(val: floatVal), toleranceBefore: CMTime.zero, toleranceAfter: kCMTimeZero)
+                    self.player.seek(to: convertToCMTime(val: floatVal), toleranceBefore: CMTime.zero, toleranceAfter: CMTime.zero)
                 }
             }
         }
