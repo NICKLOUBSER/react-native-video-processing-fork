@@ -3,8 +3,7 @@
   <component name="ChangeListManager">
     <list default="true" id="155496f6-8746-4a7e-ac46-c6fa63951a30" name="Default" comment="">
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/ios/RNVideoProcessing/RNVideoPlayer.swift" afterPath="$PROJECT_DIR$/ios/RNVideoProcessing/RNVideoPlayer.swift" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/ios/RNVideoProcessing/RNVideoTrimmer/RNVideoTrimmer.swift" afterPath="$PROJECT_DIR$/ios/RNVideoProcessing/RNVideoTrimmer/RNVideoTrimmer.swift" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/android/src/main/java/com/shahenlibrary/Trimmer/Trimmer.java" afterPath="$PROJECT_DIR$/android/src/main/java/com/shahenlibrary/Trimmer/Trimmer.java" />
     </list>
     <ignored path="$PROJECT_DIR$/.tmp/" />
     <ignored path="$PROJECT_DIR$/temp/" />
@@ -18,11 +17,11 @@
   </component>
   <component name="FileEditorManager">
     <leaf>
-      <file leaf-file-name="RNVideoPlayer.swift" pinned="false" current-in-tab="true">
-        <entry file="file://$PROJECT_DIR$/ios/RNVideoProcessing/RNVideoPlayer.swift">
+      <file leaf-file-name="Trimmer.java" pinned="false" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/android/src/main/java/com/shahenlibrary/Trimmer/Trimmer.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="783">
-              <caret line="87" column="13" lean-forward="true" selection-start-line="87" selection-start-column="13" selection-end-line="87" selection-end-column="13" />
+            <state relative-caret-position="433">
+              <caret line="422" column="21" lean-forward="true" selection-start-line="422" selection-start-column="21" selection-end-line="422" selection-end-column="21" />
               <folding />
             </state>
           </provider>
@@ -41,6 +40,9 @@
       <find>UIImageOrientation.down</find>
       <find>compressionEncoder!.outputFileType = AVFileT</find>
       <find>AVLayerVideoGravity</find>
+      <find>ize.width == txf.tx &amp;&amp; size.height == txf.ty) {</find>
+      <find>elf.player.seek(to: convertToCM</find>
+      <find>cmd.add</find>
     </findStrings>
   </component>
   <component name="Git.Settings">
@@ -52,6 +54,7 @@
         <option value="$PROJECT_DIR$/ios/RNVideoProcessing/RNVideoProcessingManager.swift" />
         <option value="$PROJECT_DIR$/ios/RNVideoProcessing/RNVideoTrimmer/RNVideoTrimmer.swift" />
         <option value="$PROJECT_DIR$/ios/RNVideoProcessing/RNVideoPlayer.swift" />
+        <option value="$PROJECT_DIR$/android/src/main/java/com/shahenlibrary/Trimmer/Trimmer.java" />
       </list>
     </option>
   </component>
@@ -87,12 +90,70 @@
       <foldersAlwaysOnTop value="true" />
     </navigator>
     <panes>
+      <pane id="Scope" />
+      <pane id="Scratches" />
       <pane id="ProjectPane">
         <subPane>
           <expand>
             <path>
               <item name="RnVideoProcessingFork" type="b2602c69:ProjectViewProjectNode" />
               <item name="RnVideoProcessingFork" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="RnVideoProcessingFork" type="b2602c69:ProjectViewProjectNode" />
+              <item name="RnVideoProcessingFork" type="462c0819:PsiDirectoryNode" />
+              <item name="android" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="RnVideoProcessingFork" type="b2602c69:ProjectViewProjectNode" />
+              <item name="RnVideoProcessingFork" type="462c0819:PsiDirectoryNode" />
+              <item name="android" type="462c0819:PsiDirectoryNode" />
+              <item name="src" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="RnVideoProcessingFork" type="b2602c69:ProjectViewProjectNode" />
+              <item name="RnVideoProcessingFork" type="462c0819:PsiDirectoryNode" />
+              <item name="android" type="462c0819:PsiDirectoryNode" />
+              <item name="src" type="462c0819:PsiDirectoryNode" />
+              <item name="main" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="RnVideoProcessingFork" type="b2602c69:ProjectViewProjectNode" />
+              <item name="RnVideoProcessingFork" type="462c0819:PsiDirectoryNode" />
+              <item name="android" type="462c0819:PsiDirectoryNode" />
+              <item name="src" type="462c0819:PsiDirectoryNode" />
+              <item name="main" type="462c0819:PsiDirectoryNode" />
+              <item name="java" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="RnVideoProcessingFork" type="b2602c69:ProjectViewProjectNode" />
+              <item name="RnVideoProcessingFork" type="462c0819:PsiDirectoryNode" />
+              <item name="android" type="462c0819:PsiDirectoryNode" />
+              <item name="src" type="462c0819:PsiDirectoryNode" />
+              <item name="main" type="462c0819:PsiDirectoryNode" />
+              <item name="java" type="462c0819:PsiDirectoryNode" />
+              <item name="com" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="RnVideoProcessingFork" type="b2602c69:ProjectViewProjectNode" />
+              <item name="RnVideoProcessingFork" type="462c0819:PsiDirectoryNode" />
+              <item name="android" type="462c0819:PsiDirectoryNode" />
+              <item name="src" type="462c0819:PsiDirectoryNode" />
+              <item name="main" type="462c0819:PsiDirectoryNode" />
+              <item name="java" type="462c0819:PsiDirectoryNode" />
+              <item name="com" type="462c0819:PsiDirectoryNode" />
+              <item name="shahenlibrary" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="RnVideoProcessingFork" type="b2602c69:ProjectViewProjectNode" />
+              <item name="RnVideoProcessingFork" type="462c0819:PsiDirectoryNode" />
+              <item name="android" type="462c0819:PsiDirectoryNode" />
+              <item name="src" type="462c0819:PsiDirectoryNode" />
+              <item name="main" type="462c0819:PsiDirectoryNode" />
+              <item name="java" type="462c0819:PsiDirectoryNode" />
+              <item name="com" type="462c0819:PsiDirectoryNode" />
+              <item name="shahenlibrary" type="462c0819:PsiDirectoryNode" />
+              <item name="Trimmer" type="462c0819:PsiDirectoryNode" />
             </path>
             <path>
               <item name="RnVideoProcessingFork" type="b2602c69:ProjectViewProjectNode" />
@@ -116,8 +177,6 @@
           <select />
         </subPane>
       </pane>
-      <pane id="Scope" />
-      <pane id="Scratches" />
     </panes>
   </component>
   <component name="PropertiesComponent">
@@ -157,12 +216,13 @@
       <option name="presentableId" value="Default" />
       <updated>1572936898732</updated>
       <workItem from="1572936899961" duration="1089000" />
-      <workItem from="1572938352004" duration="1040000" />
+      <workItem from="1572938352004" duration="1724000" />
+      <workItem from="1573799126589" duration="47000" />
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="2129000" />
+    <option name="totallyTimeSpent" value="2860000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="0" y="23" width="1680" height="926" extended-state="0" />
@@ -199,11 +259,18 @@
     <watches-manager />
   </component>
   <component name="editorHistoryManager">
+    <entry file="file://$PROJECT_DIR$/ios/RNVideoProcessing/RNVideoPlayer.swift">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="9234">
+          <caret line="342" column="31" lean-forward="true" selection-start-line="342" selection-start-column="31" selection-end-line="342" selection-end-column="31" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
     <entry file="file://$PROJECT_DIR$/ios/RNVideoProcessing/RNVideoTrimmer/RNVideoTrimmer.swift">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="11151">
           <caret line="413" column="0" lean-forward="true" selection-start-line="413" selection-start-column="0" selection-end-line="413" selection-end-column="0" />
-          <folding />
         </state>
       </provider>
     </entry>
@@ -211,7 +278,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="81">
           <caret line="3" column="42" lean-forward="true" selection-start-line="3" selection-start-column="42" selection-end-line="3" selection-end-column="42" />
-          <folding />
         </state>
       </provider>
     </entry>
@@ -224,16 +290,23 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/ios/RNVideoProcessing/RNVideoTrimmer/RNVideoTrimmer.swift">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="289">
-          <caret line="312" column="57" lean-forward="false" selection-start-line="312" selection-start-column="57" selection-end-line="312" selection-end-column="57" />
-          <folding />
+        <state relative-caret-position="784">
+          <caret line="46" column="0" lean-forward="true" selection-start-line="46" selection-start-column="0" selection-end-line="46" selection-end-column="0" />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/ios/RNVideoProcessing/RNVideoPlayer.swift">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="783">
-          <caret line="87" column="13" lean-forward="true" selection-start-line="87" selection-start-column="13" selection-end-line="87" selection-end-column="13" />
+        <state relative-caret-position="802">
+          <caret line="342" column="31" lean-forward="false" selection-start-line="342" selection-start-column="31" selection-end-line="342" selection-end-column="31" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/android/src/main/java/com/shahenlibrary/Trimmer/Trimmer.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="433">
+          <caret line="422" column="21" lean-forward="true" selection-start-line="422" selection-start-column="21" selection-end-line="422" selection-end-column="21" />
           <folding />
         </state>
       </provider>

@@ -420,6 +420,10 @@ public class Trimmer {
     cmd.add("-i");
     cmd.add(source);
     cmd.add("-c:v");
+    cmd.add("-crf"); 
+    cmd.add("27");
+    cmd.add("-c:a");
+    cmd.add("copy");
     cmd.add("libx264");
     if (width != null && height != null) {
       cmd.add("-vf");
