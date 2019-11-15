@@ -21,7 +21,7 @@
         <entry file="file://$PROJECT_DIR$/android/src/main/java/com/shahenlibrary/Trimmer/Trimmer.java">
           <provider selected="true" editor-type-id="text-editor">
             <state relative-caret-position="433">
-              <caret line="422" column="21" lean-forward="true" selection-start-line="422" selection-start-column="21" selection-end-line="422" selection-end-column="21" />
+              <caret line="422" column="20" lean-forward="false" selection-start-line="422" selection-start-column="20" selection-end-line="422" selection-end-column="20" />
               <folding />
             </state>
           </provider>
@@ -90,7 +90,6 @@
       <foldersAlwaysOnTop value="true" />
     </navigator>
     <panes>
-      <pane id="Scope" />
       <pane id="Scratches" />
       <pane id="ProjectPane">
         <subPane>
@@ -177,6 +176,7 @@
           <select />
         </subPane>
       </pane>
+      <pane id="Scope" />
     </panes>
   </component>
   <component name="PropertiesComponent">
@@ -217,12 +217,13 @@
       <updated>1572936898732</updated>
       <workItem from="1572936899961" duration="1089000" />
       <workItem from="1572938352004" duration="1724000" />
-      <workItem from="1573799126589" duration="47000" />
+      <workItem from="1573799126589" duration="167000" />
+      <workItem from="1573812699192" duration="14000" />
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="2860000" />
+    <option name="totallyTimeSpent" value="2994000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="0" y="23" width="1680" height="926" extended-state="0" />
@@ -259,11 +260,18 @@
     <watches-manager />
   </component>
   <component name="editorHistoryManager">
+    <entry file="file://$PROJECT_DIR$/android/src/main/java/com/shahenlibrary/Trimmer/Trimmer.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="11394">
+          <caret line="422" column="20" lean-forward="true" selection-start-line="422" selection-start-column="20" selection-end-line="422" selection-end-column="20" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
     <entry file="file://$PROJECT_DIR$/ios/RNVideoProcessing/RNVideoPlayer.swift">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="9234">
           <caret line="342" column="31" lean-forward="true" selection-start-line="342" selection-start-column="31" selection-end-line="342" selection-end-column="31" />
-          <folding />
         </state>
       </provider>
     </entry>
@@ -299,14 +307,13 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="802">
           <caret line="342" column="31" lean-forward="false" selection-start-line="342" selection-start-column="31" selection-end-line="342" selection-end-column="31" />
-          <folding />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/android/src/main/java/com/shahenlibrary/Trimmer/Trimmer.java">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="433">
-          <caret line="422" column="21" lean-forward="true" selection-start-line="422" selection-start-column="21" selection-end-line="422" selection-end-column="21" />
+          <caret line="422" column="20" lean-forward="false" selection-start-line="422" selection-start-column="20" selection-end-line="422" selection-end-column="20" />
           <folding />
         </state>
       </provider>
